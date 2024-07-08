@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${mysql_host:127.0.0.1}:${mysql_port:3306}/${mysql_dbname:d_rms}?charset=utf8&useSSL=false&allowMultiQueries=true
+    username: ${db_user:root}
+    password: ${db_pwd:123456}
+    driver-class-name: "com.mysql.jdbc.Driver"
+
+builder:
+  author: caiyh
+  contact: 18019692161@163.com
+  cleanBuild: true
+  databaseType: mysql
+  contextPath: "rms"
+  database: d_rms
+  packageName: com.totos
+  tables:
+    - name: t_ml_model
+      comment: "模型管理表"
+    - name: t_ml_cutoff
+      comment: "模型cutoff分析"
+      entity: MCutoff
+      page: modelCutoff
+
+

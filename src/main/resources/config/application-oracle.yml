@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    #sid
+    url: jdbc:oracle:thin:@${oracle_host:127.0.0.1}:${oracle_port:1521}:${oracle_sid:sid}
+    #serverName
+    #url: jdbc:oracle:thin:@//${oracle_host:127.0.0.1}:${oracle_port:1521}/${oracle_serverName:serverName}
+    username: ${db_user:root}
+    password: ${db_pwd:123456}
+    driver-class-name: "oracle.jdbc.driver.OracleDriver"
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.Oracle10gDialect
+
+builder:
+  author: caiyh
+  contact: 18019692161@163.com
+  cleanBuild: true
+  databaseType: oracle
+  contextPath: "unionloan"
+  database: UNION_LOAN
+  packageName: com.totos
+  tables:
+    - name: t_loan_product
+      comment: "贷款产品"
+      entity: loanProduct
+      page: loan_product
+    - name: t_manager_org
+      comment: "管理机构"
+      entity: managerOrg
+      page: manager_org
+    - name: t_account_org
+      comment: "入账机构"
+      entity: accountOrg
+      page: account_org
+    - name: t_account_org_number
+      comment: "入账机构账号"
+      entity: accountOrgNumber
+      page: account_org_number
+    - name: t_loan_service_org
+      comment: "贷款服务机构"
+      entity: loanServiceOrg
+      page: loan_service_org
+    - name: t_product_route
+      comment: "贷款产品路由"
+      entity: productRoute
+      page: product_route
+    - name: t_credit_service
+      comment: "增信服务"
+      entity: creditService
+      page: credit_service
+    - name: t_product_credit_rel
+      comment: "贷款产品增信服务"
+      entity: productCreditRel
+      page: product_credit_rel
+
+
