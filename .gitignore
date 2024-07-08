@@ -1,0 +1,50 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Intellij
+*.iml
+*/*.iml
+
+*/.idea/
+.idea/
+.idea
+
+.DS_Store
+*/*node_modules
+*.log.*
+*.log
+*.factorypath
+*.project
+*/*.project
+*/*.springBeans
+*/*.classpath
+/.metadata/
+.settings
+target/*
+*/target
+
+# Gradle files
+.gradle/
+build/
+*/build/
+gradlew
+gradlew.bat
+
+*/.apt_generated
+dest
+
+*.zip
+*.rar
+
+.recommenders/
+application-*
